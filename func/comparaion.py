@@ -8,7 +8,6 @@ import numpy as np
 import face_recognition
 import shutil
 import time
-from func.reset_file import DeleteAllFiles
 # start = time.time()
 # print("time :", time.time() - start)
 
@@ -21,12 +20,8 @@ def get_face_embedding_dict(dir_path):
     embedding_dict = {}
     
     for file in file_list:
-        try:
-            img_path = os.path.join(dir_path, file) # 경로를 병합하여 새 경로 생성
-            face = cv2.imread(img_path)    # 얼굴 영역만 자른 이미지 불러오기
-        except:
-            print('FileNotFoundError')
-            raise FileNotFoundError
+        img_path = os.path.join(dir_path, file) # 경로를 병합하여 새 경로 생성
+        face = cv2.imread(img_path)    # 얼굴 영역만 자른 이미지 불러오기
         
         embedding = get_face_embedding(face)   # 얼굴 영역에서 얼굴 임베딩 벡터를 추출
         if len(embedding) > 0:   # 얼굴 영역이 제대로 detect되지 않았을 경우를 대비
@@ -53,8 +48,8 @@ def comparaion():
     try:
         now_photo_name = next(iter(now_photo_embedding_dict)) # 현재 사진
     except:
-        print('사진이 없습니다.')
-        pass
+        print('FileNotFoundError : 사진을 넣어주세요')
+        return
     all_img = {} # 전체 프로필 사진
 
     for i in profile_photo__name:
@@ -94,11 +89,11 @@ def comparaion():
         else:
             print(f"정면 사진 {3 - len(allowed_photo)}개가 부족합니다. 다시 시도하세요")
     else:
-        print('사진을 넣어주세요')
+        pass
     # print("time :", time.time() - start)
     return
 
 
 '''각자 실행할 때'''  
-# if __name__ == '__main__':
-#     comparaion()
+if __name__ == '__main__':
+    comparaion()

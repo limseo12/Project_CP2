@@ -24,11 +24,11 @@ def DeleteAllFiles():
                 destination = 'images/color_faces/' + path.split('/')[-1] # 이동할 경로
                 shutil.move(path, destination)
         except:
-            print('[WinError 5] 액세스가 거부되었습니다')
-            raise PermissionError
+            print('PermissionError [WinError 5] 액세스가 거부되었습니다')
+            return
     except:
         pass
     
 '''각자 실행할 때'''  
-# if __name__ == '__main__':
-#     DeleteAllFiles()
+if __name__ == '__main__':
+    DeleteAllFiles()
