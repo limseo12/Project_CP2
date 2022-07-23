@@ -33,7 +33,7 @@ def crop_gray(color_img_path, gray_img_save_path):
     face = face_detector.detectMultiScale(gray, 1.3, 5)
     
     source = color_img_path # 현재 경로
-    destination = 'images/unrecognized/' + img_name # 이동할 경로
+    destination = 'images/unrecognized/' + img_name # unrecognized 폴더 경로
     
     if len(face) < 1:
         # 탐지 안된 사진은 unrecognized 폴더로 이동
@@ -52,7 +52,8 @@ def crop_gray(color_img_path, gray_img_save_path):
                 shutil.move(source, destination)
                 os.remove(gray_img_save_path + img_name)
         except:
-            raise FileNotFoundError
+            print('FileNotFoundError : saved_img')
+            return
         
         cv2.destroyAllWindows()
     return
@@ -72,9 +73,9 @@ def crop_run():
         else:
             print('Allow png, jpg extensions only')
     except:
-        print('FileNotFoundError')
-        raise FileNotFoundError
+        print('FileNotFoundError : img')
+        return
 
 '''각자 실행할 때'''  
-# if __name__ == '__main__':
-#     crop_run()
+if __name__ == '__main__':
+    crop_run()
