@@ -31,7 +31,9 @@ def get_face_embedding_dict(dir_path):
             embedding_dict[os.path.splitext(file)[0]] = embedding[0]
         else:
             crop_name = dir_path.split('/')[-2]
-            Original_name = crop_name.replace('crop', 'color')
+            Original_name = crop_name.replace('crop', 'color') # 파일 이름이 바뀌면 이부분도 수정 해야함
+            # crop_faces --> color_faces
+            # crop_now_faces --> color_now_faces
             face = cv2.imread(f'images/{Original_name}/' + file) # images/color_faces/'IU12.jpg
             embedding = get_face_embedding(face)
             
