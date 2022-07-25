@@ -15,7 +15,7 @@ def get_face_embedding(face):
     return face_recognition.face_encodings(face)
 
 def get_face_embedding_dict(dir_path):
-    
+
     file_list = os.listdir(dir_path)
     embedding_dict = {}
     
@@ -30,10 +30,12 @@ def get_face_embedding_dict(dir_path):
             # os.path.splitext(file)[0]에는 이미지파일명에서 확장자를 제거한 이름이 담긴다. 
             embedding_dict[os.path.splitext(file)[0]] = embedding[0]
         else:
-            print(f"{file}사진을 등록할 수 없습니다. --> 임베딩 값 구할 수 없음") # 사진으로 인식하지 못하여 embedding이 0인 경우 사용할 수 없음
-            # 임베딩 값을 얻을 수 없는 사진은  unrecognized 폴더로 이동
-            shutil.move(img_path, 'images/unrecognized/' + file)
-            continue
+            crop_name = dir_path.split('/')[-2]
+            Original_name = crop_name.replace('crop', 'color')
+            face = cv2.imread(f'images/{Original_name}/' + file) # images/color_faces/'IU12.jpg
+            embedding = get_face_embedding(face)
+            
+            embedding_dict[os.path.splitext(file)[0]] = embedding[0]
     return embedding_dict
 
 def comparaion():
@@ -55,16 +57,17 @@ def comparaion():
     for i in profile_photo__name:
         embedding = np.linalg.norm(profile_photo_embedding_dict[i]-now_photo_embedding_dict[now_photo_name], ord=2)
         all_img[i] = embedding
-            
+    
     allowed_photo = {}
     disallowed_photo = {}
+    
     for tup in all_img.items():
-        if tup[1] < 0.31: # 임베딩 차 0.5 이하는 동일인 이상은 비동일인
+        if tup[1] < 0.31: # 임베딩 차 0.3 이하는 동일인 이상은 비동일인
             allowed_photo[tup[0]] = tup[1] # 동일인에 저장
         else:
             disallowed_photo[tup[0]] = tup[1] # 비동일인에 저장
     
-    print('등록 하려는 프로필 사진 :\n', all_img, len(all_img))
+    print('등록 하려는 프로필 사진 :\n', all_img, 'count : ', len(all_img))
     print('-------------------')
     print('비동일인 :\n', disallowed_photo)
     print('동일인 :\n', allowed_photo)
@@ -72,7 +75,7 @@ def comparaion():
     
     if len(all_img) > 0: # 찍은 사진이 1개 이상 있어야한다.
         if len(allowed_photo) >= 1: # 현재와 가장 동일한 사진을 하나 올리면 나머지는 자유
-            print('로그인 되었습니다.')
+            print('프로필 등록이 완료되었습니다.')
             try:
                 # 승인된 프로필 등록 Acceptable_Profiles copy
                 color_img_path = 'images/color_faces/'
@@ -87,7 +90,7 @@ def comparaion():
             except:
                 pass
         else:
-            print(f"정면 사진 {3 - len(allowed_photo)}개가 부족합니다. 다시 시도하세요")
+            print(f"현재 본인과 가장 비슷한 사진 len(allowed_photo)개가 부족합니다. 다시 시도하세요")
     else:
         pass
     # print("time :", time.time() - start)
