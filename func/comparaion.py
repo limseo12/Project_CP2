@@ -30,7 +30,7 @@ def get_face_embedding_dict(dir_path):
             # os.path.splitext(file)[0]에는 이미지파일명에서 확장자를 제거한 이름이 담긴다. 
             embedding_dict[os.path.splitext(file)[0]] = embedding[0]
         else:
-            print(f"{file}사진을 등록할 수 없습니다.\n 다시 등록하세요") # 사진으로 인식하지 못하여 embedding이 0인 경우 사용할 수 없음
+            print(f"{file}사진을 등록할 수 없습니다. --> 임베딩 값 구할 수 없음") # 사진으로 인식하지 못하여 embedding이 0인 경우 사용할 수 없음
             # 임베딩 값을 얻을 수 없는 사진은  unrecognized 폴더로 이동
             shutil.move(img_path, 'images/unrecognized/' + file)
             continue
@@ -38,8 +38,8 @@ def get_face_embedding_dict(dir_path):
 
 def comparaion():
     # start = time.time()
-    profile_path = 'images/crop_gray_faces/'
-    now_face_path = 'images/crop_gray_now_face/'
+    profile_path = 'images/crop_faces/'
+    now_face_path = 'images/crop_now_face/'
 
     profile_photo_embedding_dict = get_face_embedding_dict(profile_path) # 파일 이름과 변환된 백터 딕셔너리
     now_photo_embedding_dict = get_face_embedding_dict(now_face_path)
@@ -64,7 +64,7 @@ def comparaion():
         else:
             disallowed_photo[tup[0]] = tup[1] # 비동일인에 저장
     
-    print('등록 하려는 프로필 사진 :\n', all_img)
+    print('등록 하려는 프로필 사진 :\n', all_img, len(all_img))
     print('-------------------')
     print('비동일인 :\n', disallowed_photo)
     print('동일인 :\n', allowed_photo)
