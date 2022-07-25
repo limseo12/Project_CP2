@@ -33,8 +33,9 @@ def crop_gray(color_img_path, gray_img_save_path):
     img_src = cv2.imread(color_img_path) # 이미지 불러오기
 
     # 회색으로 바꿈
-    gray = cv2.cvtColor(img_src, cv2.COLOR_BGR2GRAY)
-    face = face_detector.detectMultiScale(gray, 1.3, 5)
+    # gray = cv2.cvtColor(img_src, cv2.COLOR_BGR2GRAY)
+    # face = face_detector.detectMultiScale(gray, 1.3, 5)
+    face = face_detector.detectMultiScale(img_src)
     
     source = color_img_path # 현재 경로
     destination = 'images/unrecognized/' + img_name # unrecognized 폴더 경로
@@ -47,7 +48,8 @@ def crop_gray(color_img_path, gray_img_save_path):
     else:
         x, y, w, h = face[0]
         cv2.rectangle(face, (x,y), (x+w,y+h), (255,0,0), 2)
-        cv2.imwrite(gray_img_save_path + img_name, gray[y:y+h,x:x+w])
+        # cv2.imwrite(gray_img_save_path + img_name, gray[y:y+h,x:x+w])
+        cv2.imwrite(gray_img_save_path + img_name, img_src[y:y+h,x:x+w])
         
         # 방금 저장한 이미지 불러오기
         try:
