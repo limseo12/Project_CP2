@@ -32,19 +32,22 @@ def detectAndDisplay(c,save):
     img = cv2.imread(c)
     (height, width) = img.shape[:2]
     model=cv2.dnn.readNetFromCaffe(prototxt_name,model_name)
-    blob=cv2.dnn.blobFromImage(cv2.resize(img,(300,300)),1.0,
-                            (300,300),(104.0,177.0,123.0))
+    blob=cv2.dnn.blobFromImage(cv2.resize(img,(300,300)),1.0, (300,300),(104.0,177.0,123.0))
+    
     model.setInput(blob)
+    
     detections=model.forward()
     for i in range(0, detections.shape[2]):
             
             confidence = detections[0, 0, i, 2]
             min_confidence=0.9
             img_name = c.split('/')[-1]
+            
             if confidence > min_confidence:
                     
                     box = detections[0, 0, i, 3:7] * np.array([width, height, width, height])
                     (startX, startY, endX, endY) = box.astype("int")
+                    
                     if height > endY and width > endX : #예외처리   
                             # print(save + img_name)                                        
                             cv2.imwrite(save + img_name, img[startY:endY,startX:endX])
