@@ -60,7 +60,7 @@ def detectAndDisplay(c,save):
 
 
 def crop_run():
-    # try:
+    try:
         color_img_path = 'images/color_faces/'
         crop_save_path = 'images/crop_faces/'
         color_now_img_path = 'images/color_now_face/'
@@ -107,9 +107,9 @@ def crop_run():
             else:
                 print('Allow png, jpg extensions only')
         
-    # except:
-    #     print('FileNotFoundError : img')
-        # return
+    except:
+        print('FileNotFoundError : img')
+        return
 
 '''각자 실행할 때'''  
 if __name__ == '__main__':
