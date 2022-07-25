@@ -1,5 +1,5 @@
 from func.comparaion import comparaion
-from func.crop_gray import crop_run
+from func.crop import crop_run
 from func.reset_file import DeleteAllFiles
 import time
 
