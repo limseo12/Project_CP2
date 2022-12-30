@@ -31,12 +31,12 @@ def detectAndDisplay(c,save):
         
     img = cv2.imread(c)
     (height, width) = img.shape[:2]
-    model=cv2.dnn.readNetFromCaffe(prototxt_name,model_name)
-    blob=cv2.dnn.blobFromImage(cv2.resize(img,(300,300)),1.0, (300,300),(104.0,177.0,123.0))
+    model=cv2.dnn.readNetFromCaffe(prototxt_name,model_name)    ##모델확장자에 따라 호출하는 함수가 다름 하지만 OpenCV 4.0.0 부터는 확장자 상관없이 readNet()을 사용하는 것이 좋다.
+    blob=cv2.dnn.blobFromImage(cv2.resize(img,(300,300)),1.0, (300,300),(104.0,177.0,123.0))    #Net에 입력되는 데이터는 blob 형식으로 변경 해줘야 한다.
     
-    model.setInput(blob)
+    model.setInput(blob)    #Net에 blob 형태의 데이터 넣어주는 함수
     
-    detections=model.forward()
+    detections=model.forward()      #Net을 실행 시켜줌(순방향)
     for i in range(0, detections.shape[2]):
             
             confidence = detections[0, 0, i, 2]
