@@ -9,7 +9,7 @@ Project_CP2 기업협업 프로젝트 (후케어스)\
 
 #face_rec
 #단계적 실행 순서
-1. crop_gray.py\
-2. comparaion.py\
-3. 리셋 reset_file.py\
+1. crop_gray.py
+2. comparaion.py
+3. 리셋 reset_file.py
 #main.py 모두 실행
