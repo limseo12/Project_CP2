@@ -36,7 +36,7 @@ PPT :
 ![image](https://user-images.githubusercontent.com/93918673/214771298-c68e3477-fd9e-4d08-b5eb-490ff5059d98.png)
 
 
-프로젝트에서 사용한 라이브러리와 코드들을 분석한  : https://lim123.tistory.com/65
+프로젝트에서 사용한 라이브러리와 코드들을 리뷰하였습니다. : https://lim123.tistory.com/65
 
 face_rec\
 #단계적 실행 순서
