@@ -25,9 +25,31 @@ Part : 프로젝트에서 모델 서치,테스트 데이터 수집, 모델 테�
 PPT : 
 
 ![image](https://user-images.githubusercontent.com/93918673/214771178-761d434c-5eb7-4374-9ae6-6d163231d894.png)
-![image](https://user-images.githubusercontent.com/93918673/214771206-c9d5effa-4820-4ce8-9c6a-658600d303bb.png)
-![image](https://user-images.githubusercontent.com/93918673/214771217-ccc5de37-d311-462e-a731-779090d44104.png)
-![image](https://user-images.githubusercontent.com/93918673/214771226-f33f2bbd-ae19-4032-a0b6-e1b60df81c39.png)
+![image](https://user-images.githubusercontent.com/93918673/232786364-8ee7ca6e-7528-4089-85ff-ba48ff8938e7.png)
+![image](https://user-images.githubusercontent.com/93918673/232786434-a44a6284-c94c-4054-aacf-c93e8b069e53.png)
+![image](https://user-images.githubusercontent.com/93918673/232786464-19da7aa0-a636-4ac7-a5d2-1a39b157c2cc.png)
+![image](https://user-images.githubusercontent.com/93918673/232786515-d93013d7-5156-419c-9901-dc8effbd07c1.png)
+![image](https://user-images.githubusercontent.com/93918673/232786545-e078f7bc-b207-49b3-ad90-cee4820460b1.png)
+![image](https://user-images.githubusercontent.com/93918673/232786570-6d30313d-716c-4562-a819-6f8b88140b61.png)
+![image](https://user-images.githubusercontent.com/93918673/232786588-a67862fc-91af-414a-bbb0-0f18c0958136.png)
+![image](https://user-images.githubusercontent.com/93918673/232786604-50e8d9b4-0944-4562-870f-7c0f3dbdcb5c.png)
+![image](https://user-images.githubusercontent.com/93918673/232786630-c9cee821-4ec2-4124-a1c1-2cdeaa400954.png)
+![image](https://user-images.githubusercontent.com/93918673/232786657-eb42dbae-6302-4f67-b86c-3036c037310c.png)
+![image](https://user-images.githubusercontent.com/93918673/232786688-b539fb1a-baf0-4752-8db3-d3d5efc7cf1e.png)
+![image](https://user-images.githubusercontent.com/93918673/232786721-e7cd51f7-e044-40ff-975a-2717688ffbdf.png)
+![image](https://user-images.githubusercontent.com/93918673/232786745-e33623a8-fc1a-479e-a477-729eaf3c2e2c.png)
+![image](https://user-images.githubusercontent.com/93918673/232786768-2fada88b-b66a-4d12-8853-996273d27d3d.png)
+![image](https://user-images.githubusercontent.com/93918673/232786798-9ab0944b-c7e8-41f1-8b98-18fb4ee6d9a8.png)
+![image](https://user-images.githubusercontent.com/93918673/232786845-2af6e653-5d67-4748-bcd1-605887138adf.png)
+![image](https://user-images.githubusercontent.com/93918673/232786863-f8e1a893-bb72-41bf-96b5-a69e98d45cd8.png)
+![image](https://user-images.githubusercontent.com/93918673/232786879-f5cae888-9003-403a-a0ee-be7e1c7f53c2.png)
+![image](https://user-images.githubusercontent.com/93918673/232786899-2086445d-4eef-4038-a72c-5207950b540b.png)
+![image](https://user-images.githubusercontent.com/93918673/232786936-37096a90-9186-4225-8016-44bd64d3a49c.png)
+![image](https://user-images.githubusercontent.com/93918673/232786961-7adc7515-8f08-4adb-8313-0490a2879597.png)
+
+
+
+
 ![image](https://user-images.githubusercontent.com/93918673/214771242-e25dbfac-7027-40c6-89b7-c8dfc4c5d1aa.png)
 ![image](https://user-images.githubusercontent.com/93918673/214771255-2085fa68-73a6-4fc2-be5a-6f59e9901fa9.png)
 ![image](https://user-images.githubusercontent.com/93918673/214771266-f96a22c2-fb1c-4f14-b3e1-68464bf4d304.png)
