@@ -37,7 +37,7 @@ PPT :
 ![image](https://user-images.githubusercontent.com/93918673/232786657-eb42dbae-6302-4f67-b86c-3036c037310c.png)
 ![image](https://user-images.githubusercontent.com/93918673/232786688-b539fb1a-baf0-4752-8db3-d3d5efc7cf1e.png)
 ![image](https://user-images.githubusercontent.com/93918673/232786721-e7cd51f7-e044-40ff-975a-2717688ffbdf.png)
-![image](https://user-images.githubusercontent.com/93918673/232786745-e33623a8-fc1a-479e-a477-729eaf3c2e2c.png)
+![image](https://user-images.githubusercontent.com/93918673/214771242-e25dbfac-7027-40c6-89b7-c8dfc4c5d1aa.png)
 ![image](https://user-images.githubusercontent.com/93918673/232786768-2fada88b-b66a-4d12-8853-996273d27d3d.png)
 ![image](https://user-images.githubusercontent.com/93918673/232786798-9ab0944b-c7e8-41f1-8b98-18fb4ee6d9a8.png)
 ![image](https://user-images.githubusercontent.com/93918673/232786845-2af6e653-5d67-4748-bcd1-605887138adf.png)
@@ -46,16 +46,6 @@ PPT :
 ![image](https://user-images.githubusercontent.com/93918673/232786899-2086445d-4eef-4038-a72c-5207950b540b.png)
 ![image](https://user-images.githubusercontent.com/93918673/232786936-37096a90-9186-4225-8016-44bd64d3a49c.png)
 ![image](https://user-images.githubusercontent.com/93918673/232786961-7adc7515-8f08-4adb-8313-0490a2879597.png)
-
-
-
-
-![image](https://user-images.githubusercontent.com/93918673/214771242-e25dbfac-7027-40c6-89b7-c8dfc4c5d1aa.png)
-![image](https://user-images.githubusercontent.com/93918673/214771255-2085fa68-73a6-4fc2-be5a-6f59e9901fa9.png)
-![image](https://user-images.githubusercontent.com/93918673/214771266-f96a22c2-fb1c-4f14-b3e1-68464bf4d304.png)
-![image](https://user-images.githubusercontent.com/93918673/214771276-99ae2d39-bc9d-4454-8d64-dd769bf01dce.png)
-![image](https://user-images.githubusercontent.com/93918673/214771285-6e39c573-bc04-435f-b6b0-e755dfb2a82a.png)
-![image](https://user-images.githubusercontent.com/93918673/214771298-c68e3477-fd9e-4d08-b5eb-490ff5059d98.png)
 
 
 프로젝트에서 사용한 라이브러리와 코드들을 리뷰하였습니다. : https://lim123.tistory.com/65
